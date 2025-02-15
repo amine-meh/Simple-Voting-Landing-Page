@@ -1,3 +1,4 @@
+import os
 """
 Django settings for voting project.
 
@@ -55,7 +56,7 @@ ROOT_URLCONF = 'voting.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -77,7 +78,7 @@ WSGI_APPLICATION = 'voting.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'voting_landing_page',
+        'NAME': 'votes',
         'USER': 'root',
         'PASSWORD': 'test123',
         'HOST': 'localhost',
